@@ -1,32 +1,66 @@
 body {
-    margin: 0;
-    background-color: #fff;
-    color: #000;
-    line-height: 1.5;
+  margin: 0;
+  background-color: #fff;
+  color: #000;
+  line-height: 1.5;
 }
 
 .NavLink {
-    font-size: 20px;
-    color: currentColor;
+  font-size: 20px;
+  color: currentColor;
 }
 
 .NavLink__active {
-    color: chartreuse;
+  color: chartreuse;
 }
 
 ul {
-    display: flex;
-    list-style: none;
-    justify-content: center;
+  list-style: none;
 }
 
 li {
-    margin-right: 30px;
+  margin-right: 30px;
 }
 
 h1 {
-    display: flex;
-    justify-content: center;
-    margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
 }
 
+.Header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Navigation {
+    display: flex;
+}
+
+.AutNav {
+    display: flex;
+}
+
+.Container {
+  display: flex;
+  align-items: center;
+}
+
+.Form {
+  width: 320px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+label {
+  display: flex;
+  justify-content: center;
+  /* flex-direction: column; */
+  margin-bottom: 15px;
+}
+
+/* button {
+  display: block;
+  margin: 0 auto;
+text-align: center;
+} */

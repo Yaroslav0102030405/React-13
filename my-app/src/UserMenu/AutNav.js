@@ -3,11 +3,11 @@ import { NavLink } from 'react-router-dom';
 import '../styles.css';
 
 const AutNav = () => (
-  <ul>
+  <ul className='AutNav'>
     <li>
       <NavLink
         to="/books"
-        className="NavLink"
+        className="NavLink AutNav"
         activeClassName="NavLink__active"
       >
         Регистрация
@@ -16,7 +16,7 @@ const AutNav = () => (
     <li>
       <NavLink
         to="/login"
-        className="NavLink"
+        className="NavLink AutNav"
         activeClassName="NavLink__active"
       >
         Логин

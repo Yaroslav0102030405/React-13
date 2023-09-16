@@ -1,34 +1,43 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { authOperations } from '../redux/auth';
-
 import '../styles.css';
 
-class LoginPage extends Component {
+class RegisterPage extends Component {
   state = {
+    name: '',
     email: '',
     password: '',
   };
 
   handleChange = ({ target: { name, value } }) => {
-    this.setState({ name, value });
+    this.setState({ [name]: value });
   };
 
   handleSubmit = e => {
     e.preventDefault();
 
-    this.props.onLogin(this.state);
+    this.props.onRegister(this.state);
 
     this.setState({ name: '', email: '', password: '' });
   };
 
   render() {
-    const { email, password } = this.state;
+    const { name, email, password } = this.state;
     return (
       <div>
-        <h1>Страница логина</h1>
+        <h1>Регистрации</h1>
 
         <form className="Form" onSubmit={this.handleSubmit} autoComplete="off">
+          <label>
+            Имя
+            <input
+              type="text"
+              name="name"
+              value={name}
+              onChange={this.handleChange}
+            />
+          </label>
           <label>
             Пошта
             <input
@@ -49,7 +58,7 @@ class LoginPage extends Component {
             />
           </label>
 
-          <button type="submit">Войти</button>
+          <button type="submit">Зарегестрироваться</button>
         </form>
       </div>
     );
@@ -57,7 +66,7 @@ class LoginPage extends Component {
 }
 
 const mapDispatchToProps = {
-  onLogin: authOperations.login,
+  onRegister: authOperations.register,
 };
 
-export default connect(null, mapDispatchToProps)(LoginPage);
+export default connect(null, mapDispatchToProps)(RegisterPage);

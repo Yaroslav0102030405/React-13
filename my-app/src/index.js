@@ -4,6 +4,8 @@ import App from './App';
 import 'modern-normalize/modern-normalize.css';
 import './styles.css';
 import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './redux/todos/store';
 
 // ReactDOM.render(<App />, document.getElementById("root"));
 
@@ -11,7 +13,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <React.StrictMode>
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>
     </React.StrictMode>
   </BrowserRouter>,
 );

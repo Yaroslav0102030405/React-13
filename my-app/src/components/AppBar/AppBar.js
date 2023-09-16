@@ -1,17 +1,22 @@
 import React from 'react';
-import Logo from '../Logo/Logo';
+// import { connect } from 'react-redux';
+import Navigation from '../../UserMenu/Navigation';
+import UserMenu from '../../UserMenu/UserMenu';
+import AutNav from '../../UserMenu/AutNav';
 
-const styles = {
-  header: {
-    minHeight: 80,
-    backgroundColor: 'palevioletred',
-  },
-};
+// import { authSelectors } from '../../redux/auth';
 
-const AppBar = () => (
-  <header style={styles.header}>
-    <Logo text="ЛОГО" />
+const AppBar = ({ isAuthenticated }) => (
+  <header className="Header">
+    <Navigation />
+    {isAuthenticated ? <UserMenu /> : <AutNav />}
   </header>
 );
+
+// const mapStateToProps = state => {
+//   isAuthenticated: authSelectors.getIsAuthenticated(state);
+// };
+
+// export default connect(mapStateToProps)(AppBar);
 
 export default AppBar;
