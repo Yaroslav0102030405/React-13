@@ -11,5 +11,22 @@ body {
 }
 
 .NavLink__active {
-    color: palegoldenrod;
+    color: chartreuse;
 }
+
+ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+li {
+    margin-right: 30px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+}
+

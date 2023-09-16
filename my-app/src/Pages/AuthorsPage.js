@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Axios from 'axios';
+// import Axios from 'axios';
 import { Link } from 'react-router-dom';
 // import AuthorBooks from '../components/AuthorBooks';
 
@@ -8,18 +8,18 @@ class AuthorsPage extends Component {
     authors: [],
   };
 
-  async componentDidMount() {
-    const response = await Axios.get('http://localhost:4040/authors');
-    console.log(response.data);
+  // async componentDidMount() {
+  //   const response = await Axios.get('http://localhost:4040/authors');
+  //   console.log(response.data);
 
-    this.setState({ authors: response.data });
-  }
+  //   this.setState({ authors: response.data });
+  // }
 
   render() {
     const { match } = this.props;
     return (
       <>
-        <h1>Страница авторов</h1>
+        <h1>Страница заметок</h1>
 
         <ul>
           {this.state.authors.map(author => (
