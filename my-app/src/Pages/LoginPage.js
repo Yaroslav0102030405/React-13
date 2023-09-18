@@ -11,7 +11,7 @@ class LoginPage extends Component {
   };
 
   handleChange = ({ target: { name, value } }) => {
-    this.setState({ name, value });
+    this.setState({ [name]: value });
   };
 
   handleSubmit = e => {
@@ -19,7 +19,7 @@ class LoginPage extends Component {
 
     this.props.onLogin(this.state);
 
-    this.setState({ name: '', email: '', password: '' });
+    this.setState({ name: '',  email: '', password: '' });
   };
 
   render() {

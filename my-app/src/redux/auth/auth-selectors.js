@@ -1,5 +1,5 @@
-// const getIsAuthenticated = state => Boolean(state.auth.token);
+const getIsAuthenticated = state => Boolean(state.auth.token);
 
-// export default {
-//   getIsAuthenticated,
-// };
+export default {
+  getIsAuthenticated,
+};
